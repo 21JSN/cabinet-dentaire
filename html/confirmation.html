@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Confirmation du Rendez-vous - Cabinet Dentaire de Jordan</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- CSS personnalisé -->
+    <link rel="stylesheet" href="../assets/styles/confirmation.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="accueil.html">
+                <img src="assets/images/logo.png" alt="Logo Cabinet Dentaire de Jordan" height="40">
+                
+            </a>
+        </div>
+    </nav>
+
+    <!-- Confirmation du Rendez-vous -->
+    <section class="container my-5 text-center">
+        <div class="confirmation-box shadow-lg p-4 rounded">
+            <img src="assets/images/success.png" alt="Confirmation" class="confirmation-icon mb-3">
+            <h2 class="text-success">Votre rendez-vous a été confirmé avec succès !</h2>
+            <p class="lead">Merci <span id="client-name"></span>, votre rendez-vous est bien enregistré.</p>
+
+            <div class="confirmation-details text-start mx-auto" style="max-width: 600px;">
+                <p><strong>Nom :</strong> <span id="nom"></span></p>
+                <p><strong>Email :</strong> <span id="email"></span></p>
+                <p><strong>Téléphone :</strong> <span id="telephone"></span></p>
+                <p><strong>Date :</strong> <span id="date"></span></p>
+                <p><strong>Heure :</strong> <span id="heure"></span></p>
+                <p><strong>Période de la journée :</strong> <span id="periode"></span></p> <!-- Ajout de la période -->
+                <p><strong>Dentiste choisi :</strong> <span id="dentiste"></span></p>
+                <p><strong>Raison de la visite :</strong> <span id="raison"></span></p>
+            </div>
+            
+
+            <a href="accueil.html" class="btn btn-primary mt-3">Retour à l'accueil</a>
+        </div>
+    </section>
+
+    
+    <!-- Footer -->
+    <footer class="bg-primary text-white text-center py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-start">
+                    <p>Contactez-nous:</p>
+                    <p>Email: <a href="mailto:JordanCD@gmail.com" class="text-white">JordanCD@gmail.com</a></p>
+                    <p>Téléphone: +1 (435) 834-4500</p>
+                    <p>Adresse: 23 rue Rideau, K1N 4M5</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p>Horaire d'ouverture:</p>
+                    <p>Lundi - Vendredi: 08h - 17h</p>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2025 Cabinet Dentaire de Jordan. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script de confirmation -->
+    <script src="javascript/confirmation.js"></script>
+
+    <script src="javascript/routes.js"></script>
+
+
+</body>
+</html>

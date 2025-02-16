@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cabinet Dentaire de Jordan</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS personnalisé -->
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    
+    <!-- Mapbox CSS -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="accueil.html">
+                <img src="assets/images/logo.png" alt="Cabinet Dentaire de Jordan" height="40">
+        
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="services.html">Service</a></li>
+                    <li class="nav-item"><a class="nav-link" href="equipe.html">Notre équipe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="rendez_vous.html">Rendez-vous</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section principale -->
+    <header class="text-center py-5 bg-light" style="margin-top: 80px;">
+        <div class="container">
+            <h1 class="text-primary"><strong>Soin Dentaire d'Exception</strong></h1>
+            <p class="lead">Offrez à votre sourire le traitement qu’il mérite avec des soins professionnels adaptés à toute la famille.</p>
+            <a href="services.html" class="btn btn-primary">Voir nos services</a>
+        </div>
+    </header>
+
+    <!-- Section À propos -->
+    <section class="container my-5">
+        <h2 class="text-center">À propos de nous</h2>
+        <p class="text-center"><strong>Bienvenue au Cabinet Dentaire de Jordan</strong></p>
+        <p>Découvrez l’excellence en matière de soins dentaires au Cabinet Dentaire de Jordan. Que vous recherchiez un simple nettoyage, une intervention spécialisée ou un blanchiment dentaire pour un sourire éclatant, nous répondons à tous vos besoins.</p>
+        <p>Notre équipe passionnée de professionnels dévoués et notre personnel chaleureux sont déterminés à vous faire sentir spécial et satisfait. Au Cabinet Dentaire de Jordan, vous serez accueilli avec soin et traité avec la plus grande attention dans une atmosphère sereine et invitante.</p>
+        <p>Rendez-nous visite au <strong>29 rue Rideau, Ottawa, ON K1N 4M5</strong>, et profitez du service exceptionnel que vous méritez.</p>
+    </section>
+
+    <!-- Témoignages -->
+    <section class="container my-5">
+        <h2 class="text-center">Témoignages</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="testimonial-box p-3 shadow-sm bg-white rounded">
+                    <p>⭐️⭐️⭐️⭐️⭐️</p>
+                    <p>"Un service exceptionnel ! Mon sourire n’a jamais été aussi éclatant."</p>
+                    <p><strong>- Sophie D.</strong></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-box p-3 shadow-sm bg-white rounded">
+                    <p>⭐️⭐️⭐️⭐️⭐️</p>
+                    <p>"Une équipe professionnelle et à l’écoute. Je recommande vivement !"</p>
+                    <p><strong>- Marc R.</strong></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-box p-3 shadow-sm bg-white rounded">
+                    <p>⭐️⭐️⭐️⭐️⭐️</p>
+                    <p>"Merci pour votre accueil chaleureux et vos soins de qualité."</p>
+                    <p><strong>- Julie T.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Carte et Contact -->
+    <section class="container my-5">
+        <h2 class="text-center">Contactez-nous</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Email: <a href="mailto:JordanCD@gmail.com">JordanCD@gmail.com</a></p>
+                <p>Téléphone: <strong>+1 (365) 834-4500</strong></p>
+                <p>Adresse: <strong>29 rue Rideau, Ottawa, ON K1N 4M5</strong></p>
+                <h5>Horaires d'ouverture</h5>
+                <p>Lundi - Vendredi: 08h - 17h</p>
+            </div>
+            <div class="col-md-6">
+                <!-- Carte avec Mapbox -->
+                <div id="map" style="height: 250px; width: 100%; border-radius: 10px;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white text-center py-3">
+        <p>&copy; 2025 Cabinet Dentaire de Jordan. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- MapBox -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.js'></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            mapboxgl.accessToken = 'pk.eyJ1IjoiamEyOSIsImEiOiJjbHg5aW5sZ2sycDEyMnJxMWExYmdtdGh0In0.nlTDcinWQly9hWoZzwCzig';
+            const map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v12',
+                center: [-75.6972, 45.4215],
+                zoom: 14
+            });
+            new mapboxgl.Marker()
+                .setLngLat([-75.6972, 45.4215])
+                .setPopup(new mapboxgl.Popup().setHTML("<h6>Cabinet Dentaire de Jordan</h6><p>29 rue Rideau, Ottawa, ON K1N 4M5</p>"))
+                .addTo(map);
+        });
+    </script>
+</body>
+</html>
